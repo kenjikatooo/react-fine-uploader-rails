@@ -37,20 +37,20 @@ class PhotosController < ApplicationController
      end
   end
 
-  def finish
-    # Grab all parts of photo
-    photos = Photo.where(qquuid: params[:qquuid]).all
-    # Combine all parts
-    @photo = Photo.combine_photos(photos)
-
-    if @photo.save
-       respond_to do |format|
-          format.json {
-             render json: { success: true }
-          }
-       end
-     end
-  end
+  #def finish
+  #  # Grab all parts of photo
+  #  photos = Photo.where(qquuid: params[:qquuid]).all
+  #  # Combine all parts
+  #  @photo = Photo.combine_photos(photos)
+#
+  #  if @photo.save
+  #     respond_to do |format|
+  #        format.json {
+  #           render json: { success: true }
+  #        }
+  #     end
+  #   end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.

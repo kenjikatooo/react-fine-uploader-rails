@@ -42,6 +42,7 @@ class PhotosWrapper extends React.Component {
       uploader.methods.setParams(params, id)
     })
 
+    // ファイルの削除
     uploader.on('onSubmitDelete', (id) => {
       console.log('onSubmitDelete')
       let params = {
@@ -51,6 +52,7 @@ class PhotosWrapper extends React.Component {
     })
   }
 
+  // 画像を表示する
   render() {
     const photos = this.state.photos.map((photo) =>
       <div className="card" key={photo.id}>

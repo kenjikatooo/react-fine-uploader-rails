@@ -1,6 +1,7 @@
 class Photo < ApplicationRecord
   mount_uploader :image, ImageUploader
 
+  # 画像の表示に関してのメソッド→あまり保存とは関係ない
   def self.combine_photos(photos)
     # =>  Convert the carrierwave attachment(image)
     files = photos.map{|p| p.image.file.to_file}
